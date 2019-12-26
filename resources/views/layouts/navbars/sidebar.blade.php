@@ -32,6 +32,12 @@
                 <span class="sidebar-normal">{{ __('Adicionar Digimon') }} </span>
               </a>
             </li>
+            <li class="nav-item{{ $activePage == 'dex_digimon' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('dex_digimon') }}">
+                <i class="material-icons">list_alt</i>
+                <span class="sidebar-normal">{{ __('Dex') }} </span>
+              </a>
+            </li>
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.edit') }}">
                 <span class="sidebar-mini"> UP </span>

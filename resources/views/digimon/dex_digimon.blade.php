@@ -1,0 +1,1 @@
+@extends('layouts.app', ['activePage' => 'dex_digimon', 'titlePage' => __('Dex')])

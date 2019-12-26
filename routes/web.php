@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,6 +12,12 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('add_digimon', function() {
 		return view('digimon.add_digimon');
 	})->name('add_digimon');
+
+	Route::put('digimon', ['as' => 'digimon.store', 'uses' => 'DigimonController@store']);
+
+	Route::get('dex_digimon', function() {
+		return view('digimon.dex_digimon');
+	})->name('dex_digimon');
 });
 
 Route::group(['middleware' => 'auth'], function () {

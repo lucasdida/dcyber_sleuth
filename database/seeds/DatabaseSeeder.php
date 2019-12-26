@@ -12,5 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([UsersTableSeeder::class]);
+        $this->call([DigimonAttributeTableSeeder::class]);
+        $this->call([DigimonLevelTableSeeder::class]);
+        $this->call([DigimonTypeTableSeeder::class]);
     }
 }
